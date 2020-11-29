@@ -1,18 +1,13 @@
 const express = require('express');
-const app = express();
 const dotenv = require('dotenv');
+const sequelize = require('./database/connection');
+
+const app = express();
+sequelize.sync();
 
 dotenv.config();
 
-//Import Routes
-const login = require('./api/routes/auth/login');
-const tokenVerify = require('./api/routes/auth/tokenVerify');
-
-//Middleware
 app.use(express.json());
-
-//Route Middlewares
-app.use('/auth', login);
-app.use('/auth', tokenVerify);
+app.use('/', require('./routes'));
 
 module.exports = app;
