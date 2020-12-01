@@ -21,7 +21,7 @@ headers: {
 > body: JSON.stringify({
 >   "name": [string],
 >   "primay_color": [char(6)],
->  "secondary_color": [char(6)]
+>   "secondary_color": [char(6)]
 > }),
 > ```
 
@@ -30,7 +30,11 @@ headers: {
 > ```javascript
 > body: JSON.stringify({
 >   "name": [string],
->   "primay_color": [char(6)],
->   "secondary_color": [char(6)]
+> }),
+> ```
+> OR
+> ```javascript
+> body: JSON.stringify({
+>   "id": [integer],
 > }),
 > ```
