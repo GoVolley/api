@@ -6,6 +6,8 @@ const User = require('../../database/models/User');
 
 async function login(request, response)
 {
+  await tokenVerify(request, response);
+  
   const {error} = validator.validate(request.body);
   if (error) return new ErrorMessage(error.details[0].message,error.details[0].context.key).send(response);
 

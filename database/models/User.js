@@ -5,13 +5,13 @@ class User extends Model {}
 
 User.init({
 
-    uuid: {
-        primaryKey: true,
-        type: DataTypes.UUID,
-        defaultValue: require("sequelize").UUIDV4
-    },
-    email: DataTypes.STRING,
-    password: DataTypes.TEXT,
+  user_uuid: {
+      primaryKey: true,
+      type: DataTypes.UUID,
+      defaultValue: require("sequelize").UUIDV4
+  },
+  email: DataTypes.STRING,
+  password: DataTypes.TEXT,
 
 }, 
 { 
@@ -20,7 +20,7 @@ User.init({
   createdAt: 'created_at',
   updatedAt: 'updated_at',
   defaultScope: {
-    attributes: { exclude: ['uuid', 'password'] }
+    attributes: { exclude: ['password'] }
   } 
 });
 
