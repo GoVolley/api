@@ -38,3 +38,31 @@ headers: {
 >   "id": [integer],
 > }),
 > ```
+
+## Comptes
+### Créer un compte 
+> `https://api.url/auth/register`
+> ```javascript
+> body: JSON.stringify({
+>   "email": [string],
+>   "password": [text],
+>   "confirm_password": [text]
+> }),
+> ```
+
+### Se connecter 
+> `https://api.url/auth/login`
+> ```javascript
+> body: JSON.stringify({
+>   "email": [string],
+>   "password": [text]
+> }),
+> ```
+
+### Vérifier son compte
+> `https://api.url/auth/verified`
+> ```javascript
+> query: {
+>   "token": [text]
+> },
+> ```
