@@ -12,7 +12,7 @@ User.init({
   },
   email: DataTypes.STRING,
   password: DataTypes.TEXT,
-
+  verified_at: DataTypes.DATE
 }, 
 { 
   sequelize: sequelize, 

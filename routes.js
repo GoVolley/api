@@ -4,6 +4,8 @@ const authController = require('./api/controllers/authController');
 const sportController = require('./api/controllers/sportController');
 
 router.post('/auth/login', async (request, response) => {authController.login(request, response)});
+router.post('/auth/register', async (request, response) => {authController.register(request, response)});
+router.get('/auth/verified', async (request, response) => {authController.verified(request, response)});
 router.post('/sport/store', async (request, response) => {sportController.store(request, response)});
 router.post('/sport/destroy', async (request, response) => {sportController.destroy(request, response)});
 
