@@ -1,8 +1,8 @@
 const Sequelize = require("sequelize");
 
-const sequelize = new Sequelize('govolley', 'root', '', {
+const sequelize = new Sequelize('govolley', 'root', process.env.MYSQL_PASSWORD, {
   dialect: 'mysql',
-  host: 'localhost',
+  host: process.env.MYSQL_HOST,
   pool: {
     max: 5,
     min: 0,
