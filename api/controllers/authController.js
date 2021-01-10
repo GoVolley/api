@@ -8,11 +8,11 @@ const jwt = require('jsonwebtoken');
 
 const nodemailer = require("nodemailer");
 const mailTransport = nodemailer.createTransport({
-  host: "smtp.mailtrap.io",
+  host: "host",
   port: 2525,
   auth: {
-    user: "4460c0bbf79d49",
-    pass: "9330be2a352e86"
+    user: "username",
+    pass: "password"
   }
 });
 
@@ -72,7 +72,7 @@ async function register(request, response)
   const verifiedToken = jwt.sign({email: user.email,}, process.env.SECRET_TOKEN);
 
   const headerMail = await mailTransport.sendMail({
-    from: '"Fred Foo" <foo@example.com>',
+    from: '"Name" <email@email.fr>',
     to: request.body.email,
     subject: "Activation de votre compte",
     text: "Activation de votre compte",
