@@ -16,6 +16,4 @@ class SuccessMessage {
 
 }
 
-module.exports = {
-  SuccessMessage,
-}
+module.exports = SuccessMessage;

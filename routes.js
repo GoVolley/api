@@ -8,5 +8,6 @@ router.post('/auth/register', async (request, response) => {authController.regis
 router.get('/auth/verified', async (request, response) => {authController.verified(request, response)});
 router.post('/sport/store', async (request, response) => {sportController.store(request, response)});
 router.post('/sport/destroy', async (request, response) => {sportController.destroy(request, response)});
+router.get('/sport/showAll', async (request, response) => {sportController.showAll(request, response)});
 
 module.exports = router;

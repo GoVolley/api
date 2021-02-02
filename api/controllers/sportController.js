@@ -1,5 +1,5 @@
-const { ErrorMessage } = require('../constructors/errorMessage');
-const { SuccessMessage } = require('../constructors/successMessage');
+const ErrorMessage = require('../constructors/errorMessage');
+const SuccessMessage = require('../constructors/successMessage');
 
 const tokenVerify = require('../middlewares/token');
 
@@ -29,6 +29,14 @@ async function store(request, response) {
     if (existSport) return new ErrorMessage(error).send(response);
   }
 
+}
+
+async function showAll(request, response) {
+  
+  await tokenVerify(request, response);
+
+  const sports = await Sport.findAll();
+  return response.json(sports);
 }
 
 async function destroy(request, response) {
@@ -68,4 +76,5 @@ async function destroy(request, response) {
 module.exports = {
   store,
   destroy,
+  showAll,
 };
