@@ -16,7 +16,7 @@ User.init({
 }, 
 { 
   sequelize: sequelize, 
-  modelName: 'user', 
+  modelName: 'User', 
   createdAt: 'created_at',
   updatedAt: 'updated_at',
   defaultScope: {

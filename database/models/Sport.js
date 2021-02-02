@@ -10,8 +10,8 @@ Sport.init({
         type: DataTypes.INTEGER(11),
     },
     name: DataTypes.STRING(50),
-    primary_color: DataTypes.SMALLINT(6),
-    secondary_color: DataTypes.SMALLINT(6),
+    primary_color: DataTypes.CHAR(6),
+    secondary_color: DataTypes.CHAR(6),
 
 }, 
 { 
